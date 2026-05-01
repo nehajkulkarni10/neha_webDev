@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="xyz"> Hello Guys </p>
+
+    <p id="abc"> Web Development </p>
+
+    <div class="myClass"> AI Developer - 0 </div>
+
+    <div class="myClass"> ML Developer - 1 </div>
+
+    <p> plain simple paragraph tag</p>
+
+    <div class="box">module 1</div>
+
+    <div class="box">module 2</div>
+
+    <ul id="data">
+
+    </ul>
+
+    <script>
+        // DOM
+        // Element = HTML Tag 
+        // document = web page in js
+        // Selecting Method - Select means to cjoose html tag through js
+
+        //1. getElementById ("Id name value")
+
+       var ele = document.getElementById("xyz")
+       console.log(ele)
+
+       var ele1 = document.getElementById("abc")
+       console.log(ele1)
+
+       console.log(ele1.textContent)
+
+       // 2. getElementByClassName
+
+       var ele2 = document.getElementsByClassName("myClass")
+       console.log(ele2)
+
+       console.log(ele2[1])
+       console.log(ele2[1].textContent)
+
+       //3. Tag w/o ID and class
+       
+       var ele3 = document.getElementsByTagName("p")
+       console.log(ele3)
+       console.log(ele3[2])
+       console.log(ele3[2].textContent)
+
+       // 4. querySelection - nly selects fisrt - element / tag
+       // follow the rules of css selector - # ID name, .CLASSNAME , .TAGNAME
+
+       const xyz = document.querySelector(".box")
+
+       console.log(xyz);
+
+       // querySelectorAll - select all the elemnts and tags 
+
+       const pqr = document.querySelectorAll(".box")
+       console.log(pqr)
+
+       console.log(pqr[0].textContent)
+
+       const ul = document.getElementById("data")
+       // create element
+       const list = document.createElement("li")
+       list.textContent = "Water"
+
+       ul.appendChild(list)
+
+       
+    </script>
+</body>
+</html>
